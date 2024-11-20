@@ -6,7 +6,7 @@ import addStuff from './cart.js'
 class hamburger extends Site  {
 
     get hamBtn () {
-        return s$('button[id="inventory_sidebar_link"]');
+        return $('button[id="react-burger-menu-btn"]');
     }
     
     get invenBtn () {
@@ -24,7 +24,7 @@ class hamburger extends Site  {
     }
     async hamBurg () {
 
-        await this.hamBth.click();
+        await this.hamBtn.click();
 
         await this.invenBtn.click();
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
@@ -32,17 +32,15 @@ class hamburger extends Site  {
         await this.aboutBtn.click();
         await expect(browser).toHaveUrl('https://saucelabs.com/');
 
-        await browser.url('https://www.saucedemo.com');
+        await browser.url('https://www.saucedemo.com/');
         await loggingIn.getIn('standard_user', 'secret_sauce');
-        await expect(browser).toHaveUrl('https://saucedemo.com/inventory.html');
+        await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
 
         await addStuff.here()
 
         await this.hamBtn.click()
         await this.reset.click();
-        await expect(browser).toHaveUrl('https://saucedemo.com/inventory.html')
     
-        await this.hamBtn.click();
         await this.logOut.click();
 
         await browser.url('https://www.saucedemo.com/');

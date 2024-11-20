@@ -3,7 +3,7 @@ import Site from './page.js'
 
 
 class addStuff extends Site {
-    get light () {
+    get bikeLight () {
         return $('button[id="add-to-cart-sauce-labs-bike-light"]');
     }
     get boltShirt() {
@@ -15,12 +15,12 @@ class addStuff extends Site {
     get jacket() {
         return $('button[id="add-to-cart-sauce-labs-fleece-jacket"]');
     }
-    async here () {
-        await this.light.click();
+    async here() {
+        await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+        await this.bikeLight.click();
         await this.boltShirt.click();
         await this.redShirt.click();
         await this.jacket.click();
-        await this.del.click();
     }
 
 }
