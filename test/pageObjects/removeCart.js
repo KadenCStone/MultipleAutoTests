@@ -6,11 +6,11 @@ class takeout extends Site {
         return $('#remove-sauce-labs-bike-light');
     }
     get deFleece() {
-        return $('[#remove-sauce-labs-fleece-jacket');
+        return $('#remove-sauce-labs-fleece-jacket');
     }
     async del () {
-        await takeout.deLight.click();
-        await takeout.deFeleece.click();
+        await this.deLight.click();
+        await this.deFleece.click();
     }
 }
 

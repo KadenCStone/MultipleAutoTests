@@ -38,11 +38,10 @@ class hamburger extends Site  {
 
         await addStuff.here()
 
-        await this.hamBtn.click()
+        await this.hamBtn.click();
         await this.reset.click();
-    
         await this.logOut.click();
-
+    
         await browser.url('https://www.saucedemo.com/');
         await loggingIn.getIn('standard_user', 'secret_sauce');
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
