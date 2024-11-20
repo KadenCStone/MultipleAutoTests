@@ -1,7 +1,7 @@
 import { $ } from '@wdio/globals'
 import Site from './page.js'
 
-class takeout extends Site () {
+class takeout extends Site {
     get deLight () {
         return $('#remove-sauce-labs-bike-light');
     }
@@ -14,4 +14,4 @@ class takeout extends Site () {
     }
 }
 
-export default new takeout
+export default new takeout()

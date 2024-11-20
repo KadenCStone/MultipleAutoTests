@@ -50,4 +50,4 @@ class Checkout extends Site {
         await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-complete.html');
     }
 }
-export default new Checkout
+export default new Checkout();

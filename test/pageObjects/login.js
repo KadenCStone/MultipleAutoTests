@@ -1,7 +1,7 @@
 import { $ } from '@wdio/globals'
 import Site from './page.js'
 
-class loggingIn extends Site {
+class loggingIn extends Site  {
     
     get user () {
         return $('.input_error.form_input');

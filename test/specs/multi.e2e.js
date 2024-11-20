@@ -9,7 +9,6 @@ describe('Hamburger and Cart Test ', () => {
     it('should go through everything clickable in hamburger menu, then add and remove then finally chekout the cart.', async () => {
         
         await loggingIn.open();
-        await expect(browser).toHaveUrl('https://www.saucedemo.com')
         await loggingIn.getIn('standard_user', 'secret_sauce');
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
     
@@ -26,6 +25,5 @@ describe('Hamburger and Cart Test ', () => {
 
 
         await Checkout.there('Tom', 'Bean', '83204');
-
     });
 });

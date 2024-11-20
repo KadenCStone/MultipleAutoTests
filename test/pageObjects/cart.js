@@ -16,12 +16,12 @@ class addStuff extends Site {
         return $('button[id="add-to-cart-sauce-labs-fleece-jacket"]');
     }
     async here () {
-        await this.addStuff.light.click();
-        await this.addStuff.boltShirt.click();
-        await this.addStuff.redShirt.click();
-        await this.addStuff.jacket.click();
-        await this.takeout.del.click();
+        await this.light.click();
+        await this.boltShirt.click();
+        await this.redShirt.click();
+        await this.jacket.click();
+        await this.del.click();
     }
 
 }
-export default new addStuff
+export default new addStuff();
