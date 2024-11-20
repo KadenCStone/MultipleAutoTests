@@ -12,7 +12,7 @@ describe('Hamburger and Cart Test ', () => {
         await loggingIn.getIn('standard_user', 'secret_sauce');
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
     
-        await hamburger.hamburg();
+        await hamburger.hamBurg();
         
         await addStuff.here();
         
